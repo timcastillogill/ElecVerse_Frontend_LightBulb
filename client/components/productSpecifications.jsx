@@ -2,11 +2,12 @@ import React from "react";
 
 const ProductSpecifications = ({ product }) => {
   return (
-    <section>
-      <table>
+    <section className="p-2 mx-2 mt-2">
+      <h3 className="mb-3 text-xl">Specifications</h3>
+      <table className="text-sm border-separate table-auto border-spacing-4">
         <tbody>
           <tr>
-            <td>Brand</td>
+            <td className="">Brand</td>
             <td>{product.brand}</td>
           </tr>
           <tr>
