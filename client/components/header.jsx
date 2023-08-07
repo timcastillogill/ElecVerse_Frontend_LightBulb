@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="flex justify-between p-2 py-1 align-middle">
+    <header className="flex justify-between p-2 py-1 align-middle">
       <h1 className="ml-1 text-xl">
         <span className="mr-0.5">octopus</span>
         <span className="antialiased font-thin">energy</span>
@@ -13,7 +13,7 @@ const Header = () => {
         src="/basket.svg"
         alt="Your Shopping Basket"
       />
-    </div>
+    </header>
   );
 };
 
