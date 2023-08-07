@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AddToCart = ({ product, quantity }) => {
+const AddToCart = ({ productPrice, quantity, onQuantityChange }) => {
   const [currentQuantity, setCurrentQuantity] = useState(quantity);
 
   const productPriceFormatter = (productPrice) => {
@@ -17,16 +17,18 @@ const AddToCart = ({ product, quantity }) => {
   const handleDecreaseQuantity = () => {
     if (currentQuantity > 1) {
       setCurrentQuantity((prevQuantity) => prevQuantity - 1);
+      onQuantityChange(quantity - 1);
     }
   };
 
   const handleIncreaseQuantity = () => {
     setCurrentQuantity((prevQuantity) => prevQuantity + 1);
+    onQuantityChange(quantity + 1);
   };
 
   return (
     <section>
-      <h3>£{productPriceFormatter(product.price)}</h3>
+      <h3>£{productPriceFormatter(productPrice)}</h3>
       <button onClick={handleDecreaseQuantity} disabled={currentQuantity <= 1}>
         -
       </button>

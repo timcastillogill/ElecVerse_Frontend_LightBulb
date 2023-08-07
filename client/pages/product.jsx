@@ -7,11 +7,20 @@ import AddToCart from "../components/product/cart/addToCart";
 export default function Product() {
   const [productData, setProductData] = useState(products);
   const [cartQuantity, setCartQuantity] = useState(1);
+
+  const handleQuantityChange = (newQuantity) => {
+    setCartQuantity(newQuantity);
+  };
+
   return (
     <div>
       <Header />
       <ProductHeader product={productData[0]} />
-      <AddToCart product={productData[0]} quantity={cartQuantity} />
+      <AddToCart
+        productPrice={productData[0].price}
+        quantity={cartQuantity}
+        onQuantityChange={handleQuantityChange}
+      />
     </div>
   );
 }
