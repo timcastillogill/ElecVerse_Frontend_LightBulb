@@ -1,5 +1,4 @@
 import AddToCart from "./addToCart";
-import { mockProducts } from "./mockProduct";
 import { fireEvent, render, screen } from "@testing-library/react";
 
 describe("Given an array of product objects and a quantity", () => {

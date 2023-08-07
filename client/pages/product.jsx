@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../components/header";
 import ProductHeader from "../components/product/productHeader";
 import { products } from "../../server/db";
-import AddToCart from "../components/product/cart/addToCart";
+import AddToCart from "../components/product/addToCart/addToCart";
 import ProductDescription from "../components/productDescription";
 import ProductSpecifications from "../components/productSpecifications";
 import FinePrint from "../components/finePrint";
