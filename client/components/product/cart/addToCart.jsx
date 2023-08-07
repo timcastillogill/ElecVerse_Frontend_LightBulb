@@ -33,14 +33,36 @@ const AddToCart = ({ productPrice, quantity, onQuantityChange }) => {
   };
 
   return (
-    <section>
-      <h3>£{productPriceFormatter(productPrice)}</h3>
-      <button onClick={handleDecreaseQuantity} disabled={currentQuantity <= 1}>
-        -
-      </button>
-      <span title="Current quantity">{currentQuantity}</span>
-      <button onClick={handleIncreaseQuantity}>+</button>
-      <button>Add to cart</button>
+    <section className="m-2">
+      <small className="flex justify-end mr-10 text-xs">Qty</small>
+      <div className="flex flex-row justify-between">
+        <h3 className="ml-2 text-xl ">
+          £{productPriceFormatter(productPrice)}
+        </h3>
+        <div className="mr-2">
+          <button
+            className="text-xl text-siphon h-7 w-7 rounded-xl bg-sohoLights disabled:opacity-75"
+            onClick={handleDecreaseQuantity}
+            disabled={currentQuantity <= 1}
+          >
+            -
+          </button>
+          <span className="m-2 text-xl" title="Current quantity">
+            {currentQuantity}
+          </span>
+          <button
+            className="text-xl text-siphon h-7 w-7 rounded-xl bg-sohoLights"
+            onClick={handleIncreaseQuantity}
+          >
+            +
+          </button>
+        </div>
+      </div>
+      <div className="flex">
+        <button className="w-screen h-10 mx-2 mt-4 rounded-md text-siphon justify-stretch bg-sohoLights hover:bg-plum">
+          Add to cart
+        </button>
+      </div>
     </section>
   );
 };
