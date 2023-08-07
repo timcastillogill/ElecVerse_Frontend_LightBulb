@@ -5,6 +5,7 @@ import { products } from "../../server/db";
 import AddToCart from "../components/product/cart/addToCart";
 import ProductDescription from "../components/productDescription";
 import ProductSpecifications from "../components/productSpecifications";
+import FinePrint from "../components/finePrint";
 
 export default function Product() {
   const [productData, setProductData] = useState(products);
@@ -25,6 +26,7 @@ export default function Product() {
       />
       <ProductDescription productDescription={productData[0].description} />
       <ProductSpecifications product={productData[0]} />
+      <FinePrint />
     </div>
   );
 }
