@@ -39,7 +39,7 @@ const AddToCart = ({ productPrice, quantity, onQuantityChange }) => {
         <h3 className="ml-2 text-xl ">
           £{productPriceFormatter(productPrice)}
         </h3>
-        <div className="mr-2">
+        <div>
           <button
             className="text-xl text-siphon h-7 w-7 rounded-xl bg-sohoLights disabled:opacity-75"
             onClick={handleDecreaseQuantity}
@@ -47,7 +47,7 @@ const AddToCart = ({ productPrice, quantity, onQuantityChange }) => {
           >
             -
           </button>
-          <span className="m-2 text-xl" title="Current quantity">
+          <span className="mx-3 text-xl" title="Current quantity">
             {currentQuantity}
           </span>
           <button
