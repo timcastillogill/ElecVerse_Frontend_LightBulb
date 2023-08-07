@@ -3,6 +3,8 @@ import Header from "../components/header";
 import ProductHeader from "../components/product/productHeader";
 import { products } from "../../server/db";
 import AddToCart from "../components/product/cart/addToCart";
+import ProductDescription from "../components/productDescription";
+import ProductSpecifications from "../components/productSpecifications";
 
 export default function Product() {
   const [productData, setProductData] = useState(products);
@@ -21,6 +23,8 @@ export default function Product() {
         quantity={cartQuantity}
         onQuantityChange={handleQuantityChange}
       />
+      <ProductDescription productDescription={productData[0].description} />
+      <ProductSpecifications product={productData[0]} />
     </div>
   );
 }
