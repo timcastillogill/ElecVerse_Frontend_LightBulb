@@ -30,6 +30,10 @@ const AddToCart = ({ productPrice, quantity, onQuantityChange }) => {
     setCurrentQuantity((prevQuantity) => prevQuantity + 1);
   };
 
+  const handleAddToCart = () => {
+    onQuantityChange(currentQuantity);
+  };
+
   return (
     <section className="m-2">
       <small className="flex justify-end mr-10 text-xs">Qty</small>
@@ -59,7 +63,7 @@ const AddToCart = ({ productPrice, quantity, onQuantityChange }) => {
       <div className="flex">
         <button
           className="w-screen h-10 mx-2 mt-4 rounded-md text-siphon justify-stretch bg-sohoLights hover:bg-plum"
-          onClick={onQuantityChange(currentQuantity)}
+          onClick={handleAddToCart}
         >
           Add to cart
         </button>
