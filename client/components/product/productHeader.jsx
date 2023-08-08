@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductHeader = ({ product }) => {
   return (
-    <div className="max-w-xl m-4 md:mx-auto md:flex md:items-center">
+    <section className="max-w-xl m-4 md:mx-auto md:flex md:items-center">
       <div className="md:shrink-1">
         <img
           className="rounded-3xl md:h-full md:w-100"
@@ -12,11 +12,11 @@ const ProductHeader = ({ product }) => {
       </div>
       <div className="md:ml-10 md:w-full">
         <h1 className="mt-4 text-3xl">{product.name}</h1>
-        <h3 className="mt-1 text-sm text-slate-400">
+        <h2 className="mt-1 text-sm text-slate-400">
           {product.power} // Packet of {product.quantity}
-        </h3>
+        </h2>
       </div>
-    </div>
+    </section>
   );
 };
 

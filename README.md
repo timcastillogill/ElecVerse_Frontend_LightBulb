@@ -63,3 +63,7 @@ We would like you to demonstrate your ability to:
 - Use a version control system (e.g. git) to effectively convey intent
 
 Best of luck!
+
+### My Decisions and Process
+
+- I decided

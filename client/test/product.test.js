@@ -35,7 +35,7 @@ test("should be able to add items to the basket", async () => {
   fireEvent.click(addToBasketElement);
 
   const basketIcon = screen.getByRole("button", {
-    name: /your shopping basket/i,
+    name: /open shopping cart/i,
   });
   fireEvent.click(basketIcon);
 
