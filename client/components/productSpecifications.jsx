@@ -7,7 +7,7 @@ const ProductSpecifications = ({ product }) => {
       <table className="text-sm border-separate table-auto border-spacing-4">
         <tbody>
           <tr>
-            <td className="">Brand</td>
+            <td>Brand</td>
             <td>{product.brand}</td>
           </tr>
           <tr>
