@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductSpecifications = ({ product }) => {
   return (
-    <section className="p-2 mx-2 mt-2">
+    <section className="max-w-xl p-2 mx-2 mt-2 md:mx-auto">
       <h3 className="mb-3 text-xl">Specifications</h3>
       <table className="text-sm border-separate table-auto border-spacing-4">
         <tbody>
