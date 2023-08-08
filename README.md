@@ -66,4 +66,22 @@ Best of luck!
 
 ### My Decisions and Process
 
-- I decided
+**Updating the given test** <br>
+Given one of the tests was expecting a summary of the basket but the implementation was not given, I decided to create a dropdown on the basket icon. This did mean an additional behaviour was required to pass the given test.
+
+Additionally, in order to mock the graphql call I adjusted the given tests as the local database would not be running for the testing environment.
+
+**Project organisation** <br>
+I decided to break this page into separate components to make it scalable and easier to work with as/when more products are added to the database.
+
+**Responsive Design** <br>
+The project is mobile-first. In order to deliver a seamless experience on a larger screen I decided to change the arrangement of the image, title and quantity information to better use the wider screen. As well as center and narrow the margins for the information, in order to make it easier and quicker to read.
+
+**Use of Apollo Client** <br>
+As this client is used as part of the Electroverse tech stack, I used it in this test to call the graphql database.
+
+**Use of TailwindCSS** <br>
+Again as this is used as part of the Electroverse tech stack, I used it for styling the project.
+
+**Lighthouse Report** <br>
+![Lighthouse report](/client/public/lighthouse-report-aug23.png)
