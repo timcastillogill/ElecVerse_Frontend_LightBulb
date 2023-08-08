@@ -23,13 +23,11 @@ const AddToCart = ({ productPrice, quantity, onQuantityChange }) => {
   const handleDecreaseQuantity = () => {
     if (currentQuantity > 1) {
       setCurrentQuantity((prevQuantity) => prevQuantity - 1);
-      onQuantityChange(quantity - 1);
     }
   };
 
   const handleIncreaseQuantity = () => {
     setCurrentQuantity((prevQuantity) => prevQuantity + 1);
-    onQuantityChange(quantity + 1);
   };
 
   return (
@@ -59,7 +57,10 @@ const AddToCart = ({ productPrice, quantity, onQuantityChange }) => {
         </div>
       </div>
       <div className="flex">
-        <button className="w-screen h-10 mx-2 mt-4 rounded-md text-siphon justify-stretch bg-sohoLights hover:bg-plum">
+        <button
+          className="w-screen h-10 mx-2 mt-4 rounded-md text-siphon justify-stretch bg-sohoLights hover:bg-plum"
+          onClick={onQuantityChange(currentQuantity)}
+        >
           Add to cart
         </button>
       </div>
