@@ -64,6 +64,8 @@ We would like you to demonstrate your ability to:
 
 Best of luck!
 
+---
+
 ### My Decisions and Process
 
 **Updating the given test** <br>
