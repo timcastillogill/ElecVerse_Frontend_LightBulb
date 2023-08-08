@@ -1,17 +1,19 @@
 import { render, screen } from "@testing-library/react";
-import { fireEvent } from "@testing-library/react";
-import Product from "../../pages/product";
+import Cart from "./cart";
 
 describe("Cart", () => {
+  const productName = "Energy saving light bulb";
+  const productQuantity = 1;
   describe("Given the 'Add to cart' button has been pressed with one Energy saving bulb", () => {
     it("when the user clicks the basket it will show 1 Energy saving bulb in their basket", () => {
-      render(<Product />);
+      render(
+        <Cart productName={productName} productQuantity={productQuantity} />
+      );
 
-      const basket = screen.getByRole("img", { name: /your shopping basket/i });
-      fireEvent.click(basket);
-
-      const basketItem = screen.getByRole("basketItem");
-      const basketQuantity = screen.getByRole("basketQuantity");
+      const basketItem = screen.getByRole("cell", {
+        name: /energy saving light bulb/i,
+      });
+      const basketQuantity = screen.getByRole("cell", { name: /1/i });
 
       expect(basketItem).toHaveTextContent("Energy saving light bulb");
       expect(basketQuantity).toHaveTextContent("1");
