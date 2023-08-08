@@ -1,6 +1,8 @@
 import React from "react";
+import { Menu } from "@headlessui/react";
+import Cart from "./cart/cart";
 
-const Header = ({ basketTotal }) => {
+const Header = ({ basketTotal, productName }) => {
   return (
     <header className="flex justify-between p-2 py-1 align-middle">
       <h1 className="ml-1 text-xl">
@@ -15,11 +17,23 @@ const Header = ({ basketTotal }) => {
             </small>
           </div>
         )}
-        <img
-          className="py-2 pr-2 fill-current h-9 md:mr-7 md:h-10"
-          src="/basket.svg"
-          alt="Your Shopping Basket"
-        />
+        <Menu>
+          <Menu.Button>
+            <img
+              className="fixed py-2 pr-2 fill-current top-1 right-2 h-9 md:mr-7 md:h-10"
+              src="/basket.svg"
+              alt="Your Shopping Basket"
+            />
+          </Menu.Button>
+
+          <Menu.Items className="absolute right-0 z-10 mt-2 rounded-lg shadow-lg">
+            {({ active }) => (
+              <div className={`${active}`}>
+                <Cart productName={productName} productQuantity={basketTotal} />
+              </div>
+            )}
+          </Menu.Items>
+        </Menu>
       </div>
     </header>
   );
