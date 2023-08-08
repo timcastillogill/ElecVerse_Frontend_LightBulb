@@ -35,7 +35,7 @@ const AddToCart = ({ productPrice, quantity, onQuantityChange }) => {
   };
 
   return (
-    <section className="m-2">
+    <section className="max-w-lg m-2 md:mx-auto">
       <small className="flex justify-end mr-10 text-xs">Qty</small>
       <div className="flex flex-row justify-between">
         <h3 className="ml-2 text-xl ">
@@ -62,7 +62,7 @@ const AddToCart = ({ productPrice, quantity, onQuantityChange }) => {
       </div>
       <div className="flex">
         <button
-          className="w-screen h-10 mx-2 mt-4 rounded-md text-siphon justify-stretch bg-sohoLights hover:bg-plum"
+          className="w-screen h-10 mx-2 mt-4 rounded-md text-siphon justify-stretch bg-sohoLights hover:bg-plum md:w-2/4 md:mx-auto"
           onClick={handleAddToCart}
         >
           Add to cart
