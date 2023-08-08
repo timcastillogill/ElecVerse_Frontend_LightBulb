@@ -2,7 +2,7 @@ import React from "react";
 
 const FinePrint = () => {
   return (
-    <footer className="p-4 bg-hemocyanin">
+    <footer className="fixed bottom-0 w-full p-4 bg-hemocyanin">
       <p className="text-xs font-thin text-slate-400">
         <small>
           Octopus Energy Ltd. is a company registered in England and Wales.
