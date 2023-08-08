@@ -10,7 +10,7 @@ import Cart from "../components/cart/cart";
 
 export default function Product() {
   const [productData, setProductData] = useState(products);
-  const [cartQuantity, setCartQuantity] = useState(0);
+  const [cartQuantity, setCartQuantity] = useState(1);
 
   const handleQuantityChange = (newQuantity) => {
     setCartQuantity(newQuantity);
