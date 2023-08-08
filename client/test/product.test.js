@@ -1,8 +1,14 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import Product from "../pages/product";
+import { products } from "../../server/db";
+import { MockedProvider } from "@apollo/client/testing";
 
 test("should be able to increase and decrease product quantity", async () => {
-  const { getByText, getByTitle } = render(<Product />);
+  const { getByText, getByTitle } = render(
+    <MockedProvider>
+      <Product productDataSet={products} />
+    </MockedProvider>
+  );
 
   const increaseQuantity = getByText("+");
 
@@ -19,7 +25,11 @@ test("should be able to increase and decrease product quantity", async () => {
 });
 
 test("should be able to add items to the basket", async () => {
-  const { getByText, getByTitle } = render(<Product />);
+  const { getByText, getByTitle } = render(
+    <MockedProvider>
+      <Product productDataSet={products} />
+    </MockedProvider>
+  );
 
   const increaseQuantity = getByText("+");
 

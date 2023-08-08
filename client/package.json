@@ -10,8 +10,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "@apollo/client": "^3.8.0",
     "@headlessui/react": "^1.7.16",
     "autoprefixer": "^10.4.14",
+    "cross-fetch": "^4.0.0",
+    "graphql": "^16.7.1",
     "next": "12.2.2",
     "postcss": "^8.4.27",
     "react": "17.0.2",

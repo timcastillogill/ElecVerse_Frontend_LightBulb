@@ -6,10 +6,11 @@ import AddToCart from "../components/addToCart/addToCart";
 import ProductDescription from "../components/productDescription";
 import ProductSpecifications from "../components/productSpecifications";
 import FinePrint from "../components/finePrint";
-import Cart from "../components/cart/cart";
+import client from "../apolloClient";
+import { gql } from "@apollo/client";
 
-export default function Product() {
-  const [productData, setProductData] = useState(products);
+export default function Product({ productDataSet }) {
+  const [productData, setProductData] = useState(productDataSet);
   const [cartQuantity, setCartQuantity] = useState(1);
 
   const handleQuantityChange = (newQuantity) => {
@@ -30,4 +31,43 @@ export default function Product() {
       <FinePrint />
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  try {
+    const { data } = await client.query({
+      query: gql`
+        {
+          allProducts {
+            id
+            name
+            power
+            description
+            price
+            quantity
+            brand
+            weight
+            height
+            width
+            length
+            model_code
+            colour
+            img_url
+          }
+        }
+      `,
+    });
+    return {
+      props: {
+        productDataSet: data.allProducts,
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return {
+      props: {
+        productDataSet: [],
+      },
+    };
+  }
 }
