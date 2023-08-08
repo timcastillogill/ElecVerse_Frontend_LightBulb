@@ -85,5 +85,8 @@ As this client is used as part of the Electroverse tech stack, I used it in this
 **Use of TailwindCSS** <br>
 Again as this is used as part of the Electroverse tech stack, I used it for styling the project.
 
+**Additional Functionality** <br>
+I added functionality of adding the number of items in the basket to show next to the basket when the basket had more than 1 item. The reason it wasn't 0 items was because the test dictated that the basket must default with 1 item.
+
 **Lighthouse Report** <br>
 ![Lighthouse report](/client/public/lighthouse-report-aug23.png)
