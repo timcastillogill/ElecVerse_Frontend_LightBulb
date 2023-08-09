@@ -97,3 +97,11 @@ I added functionality of adding the number of items in the cart to show next to 
 ### Cart vs Basket
 
 I noted that there was a mixture of cart and basket being used and decided to move towards cart, as I saw this as more commonly used term, however there remains some inconsistencies which I would look to get feedback on to make the project language more ubiquitous and hopefully in-line with language used by the stakeholder(s).
+
+### Future Considerations
+
+1. The app is currently designed for 1 product only. When more products are added, the cart and related props would need to be refactored to allow for additional items and quantities by passing an array of product objects in the cart.
+
+2. Starting the cart with 1 item, I would put forward that the basket should start with 0 items
+
+3. The cart summary should have a checkout button to allow the user to move onto the payment section of the user flow.
