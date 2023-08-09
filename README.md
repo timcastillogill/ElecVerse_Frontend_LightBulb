@@ -66,27 +66,30 @@ Best of luck!
 
 ---
 
-### My Decisions and Process
+## My Decisions and Process
 
-**Updating the given test** <br>
+### Updating the given test
+
 Given one of the tests was expecting a summary of the basket but the implementation was not given, I decided to create a dropdown on the basket icon. This did mean an additional behaviour was required to pass the given test.
 
 Additionally, in order to mock the graphql call I adjusted the given tests as the local database would not be running for the testing environment.
 
-**Project organisation** <br>
-I decided to break this page into separate components to make it scalable and easier to work with as/when more products are added to the database.
+### Project organisation
 
-**Responsive Design** <br>
-The project is mobile-first. In order to deliver a seamless experience on a larger screen I decided to change the arrangement of the image, title and quantity information to better use the wider screen. As well as center and narrow the margins for the information, in order to make it easier and quicker to read.
+I've chosen to divide this page into distinct components, enhancing scalability and simplifying management, especially when incorporating additional products into the database.
 
-**Use of Apollo Client** <br>
+### Responsive Design
+
+The project prioritises mobile devices. To ensure a smooth experience on larger screens, I've reorganized the image, title, and quantity information layout to effectively utilise the extra width. Additionally, I've centralised and reduced the margins around the information, enhancing readability and efficiency.
+
+### Use of Apollo Client
+
 As this client is used as part of the Electroverse tech stack, I used it in this test to call the graphql database.
 
-**Use of TailwindCSS** <br>
-Again as this is used as part of the Electroverse tech stack, I used it for styling the project.
+### Use of TailwindCSS
 
-**Additional Functionality** <br>
+As this is used as part of the Electroverse tech stack, I used it for styling the project.
+
+### Additional Functionality
+
 I added functionality of adding the number of items in the basket to show next to the basket when the basket had more than 1 item. The reason it wasn't 0 items was because the test dictated that the basket must default with 1 item.
-
-**Lighthouse Report** <br>
-![Lighthouse report](/lighthouse-report-aug23.png)
