@@ -13,6 +13,7 @@ export default function Home() {
           Get started by visiting the <code>/product</code> URL and editing{" "}
           <code>client/pages/product.js</code>
         </p>
+        <a href="/product">Link to Product Page</a>
       </div>
     </main>
   );
