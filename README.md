@@ -46,7 +46,7 @@ This should give you two failures:
 ```sh
 FAIL test/product.test.js
     ✕ should be able to increase and decrease product quantity
-    ✕ should be able to add items to the basket
+    ✕ should be able to add items to the cart
 ```
 
 The task is to build the app that passes these tests.
@@ -70,7 +70,7 @@ Best of luck!
 
 ### Updating the given test
 
-Given one of the tests was expecting a summary of the basket but the implementation was not given, I decided to create a dropdown on the basket icon. This did mean an additional behaviour was required to pass the given test.
+Given one of the tests was expecting a summary of the cart but the implementation was not given, I decided to create a dropdown on the cart icon. This did mean an additional behaviour was required to pass the given test.
 
 Additionally, in order to mock the graphql call I adjusted the given tests as the local database would not be running for the testing environment.
 
@@ -92,4 +92,4 @@ As this is used as part of the Electroverse tech stack, I used it for styling th
 
 ### Additional Functionality
 
-I added functionality of adding the number of items in the basket to show next to the basket when the basket had more than 1 item. The reason it wasn't 0 items was because the test dictated that the basket must default with 1 item.
+I added functionality of adding the number of items in the cart to show next to the cart when the cart had more than 1 item. The reason it wasn't 0 items was because the test dictated that the cart must default with 1 item.

@@ -18,7 +18,7 @@ export default function Product({ productDataSet }) {
 
   return (
     <div>
-      <Header basketTotal={cartQuantity} productName={productData[0].name} />
+      <Header cartTotal={cartQuantity} productName={productData[0].name} />
       <ProductHeader product={productData[0]} />
       <AddToCart
         productPrice={productData[0].price}

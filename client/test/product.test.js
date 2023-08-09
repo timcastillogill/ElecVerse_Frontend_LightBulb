@@ -24,7 +24,7 @@ test("should be able to increase and decrease product quantity", async () => {
   expect(currentQuantity).toHaveTextContent("1");
 });
 
-test("should be able to add items to the basket", async () => {
+test("should be able to add items to the cart", async () => {
   const { getByText, getByTitle } = render(
     <MockedProvider>
       <Product productDataSet={products} />
@@ -41,14 +41,14 @@ test("should be able to add items to the basket", async () => {
 
   expect(currentQuantity).toHaveTextContent("4");
 
-  const addToBasketElement = getByText("Add to cart");
-  fireEvent.click(addToBasketElement);
+  const addTocartElement = getByText("Add to cart");
+  fireEvent.click(addTocartElement);
 
-  const basketIcon = screen.getByRole("button", {
+  const cartIcon = screen.getByRole("button", {
     name: /open shopping cart/i,
   });
-  fireEvent.click(basketIcon);
+  fireEvent.click(cartIcon);
 
-  const basketItems = getByTitle("Basket items");
-  expect(basketItems).toHaveTextContent("4");
+  const cartItems = getByTitle("cart items");
+  expect(cartItems).toHaveTextContent("4");
 });
