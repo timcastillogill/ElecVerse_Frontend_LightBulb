@@ -20,7 +20,7 @@ const Header = ({ cartTotal, productName }) => {
         <Menu>
           <Menu.Button aria-label="Open Shopping Cart" aria-haspopup="true">
             <img
-              className="fixed py-2 pr-2 fill-current top-1 right-2 h-9 md:mr-7 md:h-10"
+              className="py-2 pr-2 cursor-pointer fill-current  top-1 right-2 h-9 md:mr-7 md:h-10"
               src="/basket.svg"
               alt="Your Shopping Cart"
             />
