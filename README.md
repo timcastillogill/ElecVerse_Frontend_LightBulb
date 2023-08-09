@@ -93,3 +93,7 @@ As this is used as part of the Electroverse tech stack, I used it for styling th
 ### Additional Functionality
 
 I added functionality of adding the number of items in the cart to show next to the cart when the cart had more than 1 item. The reason it wasn't 0 items was because the test dictated that the cart must default with 1 item.
+
+### Cart vs Basket
+
+I noted that there was a mixture of cart and basket being used and decided to move towards cart, as I saw this as more commonly used term, however there remains some inconsistencies which I would look to get feedback on to make the project language more ubiquitous and hopefully in-line with language used by the stakeholder(s).
