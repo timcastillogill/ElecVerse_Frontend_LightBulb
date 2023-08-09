@@ -1,24 +1,8 @@
 import React, { useState } from "react";
+import { productPriceFormatter } from "./productPriceFormatter";
 
 const AddToCart = ({ productPrice, quantity, onQuantityChange }) => {
   const [currentQuantity, setCurrentQuantity] = useState(quantity);
-
-  const productPriceFormatter = (productPrice) => {
-    if (typeof productPrice === "number") {
-      const productPriceToString = productPrice.toString();
-
-      if (productPriceToString.length < 3) {
-        return `0.${productPriceToString}`;
-      }
-      const subStringBeforeLastTwoCharacters = productPriceToString.slice(
-        0,
-        -2
-      );
-      const lastTwoCharacters = productPriceToString.slice(-2);
-      return `${subStringBeforeLastTwoCharacters}.${lastTwoCharacters}`;
-    }
-    return "N/A";
-  };
 
   const handleDecreaseQuantity = () => {
     if (currentQuantity > 1) {
@@ -38,9 +22,7 @@ const AddToCart = ({ productPrice, quantity, onQuantityChange }) => {
     <section className="max-w-lg m-2 md:mx-auto">
       <small className="flex justify-end mr-10 text-xs">Qty</small>
       <div className="flex flex-row justify-between">
-        <h3 className="ml-2 text-xl ">
-          £{productPriceFormatter(productPrice)}
-        </h3>
+        <h3 className="ml-2 text-xl ">{productPriceFormatter(productPrice)}</h3>
         <div>
           <button
             className="text-xl text-siphon h-7 w-7 rounded-xl bg-sohoLights disabled:opacity-75"
