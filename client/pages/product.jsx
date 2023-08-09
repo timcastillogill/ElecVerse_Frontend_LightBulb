@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import Header from "../components/header";
 import ProductHeader from "../components/product/productHeader";
-import { products } from "../../server/db";
 import AddToCart from "../components/addToCart/addToCart";
-import ProductDescription from "../components/productDescription";
-import ProductSpecifications from "../components/productSpecifications";
+import ProductDescription from "../components/product/productDescription";
+import ProductSpecifications from "../components/product/productSpecifications";
 import FinePrint from "../components/finePrint";
 import client from "../apolloClient";
 import { gql } from "@apollo/client";
