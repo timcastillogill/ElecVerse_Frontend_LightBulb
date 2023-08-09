@@ -2,7 +2,7 @@ import React from "react";
 import { Menu } from "@headlessui/react";
 import Cart from "./cart/cart";
 
-const Header = ({ cart, productName }) => {
+const Header = ({ cartTotal, productName }) => {
   return (
     <header className="flex justify-between p-2 py-1 align-middle">
       <h1 className="ml-1 text-xl">
@@ -10,10 +10,10 @@ const Header = ({ cart, productName }) => {
         <span className="antialiased font-thin">energy</span>
       </h1>
       <div>
-        {cart <= 1 ? null : (
+        {cartTotal <= 1 ? null : (
           <div className="absolute mb-1 right-1 md:right-7">
             <small className="flex items-end justify-center p-1 text-xs text-white">
-              {cart}
+              {cartTotal}
             </small>
           </div>
         )}
@@ -29,7 +29,7 @@ const Header = ({ cart, productName }) => {
           <Menu.Items className="absolute right-0 z-10 mt-2 rounded-lg shadow-lg">
             {({ active }) => (
               <div className={`${active}`}>
-                <Cart productName={productName} productQuantity={cart} />
+                <Cart productName={productName} productQuantity={cartTotal} />
               </div>
             )}
           </Menu.Items>

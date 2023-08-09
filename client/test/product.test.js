@@ -49,6 +49,6 @@ test("should be able to add items to the cart", async () => {
   });
   fireEvent.click(cartIcon);
 
-  const cartItems = getByTitle("cart items");
+  const cartItems = getByTitle("Basket items");
   expect(cartItems).toHaveTextContent("4");
 });
