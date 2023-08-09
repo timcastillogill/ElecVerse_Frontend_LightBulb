@@ -4,8 +4,8 @@ import Cart from "./cart";
 describe("Cart", () => {
   const productName = "Energy saving light bulb";
   const productQuantity = 1;
-  describe("Given the 'Add to cart' button has been pressed with one Energy saving bulb", () => {
-    it("when the user clicks the cart it will show 1 Energy saving bulb in their cart", () => {
+  describe("Given a product", () => {
+    it("renders the name and quantity of the product", () => {
       render(
         <Cart productName={productName} productQuantity={productQuantity} />
       );
@@ -15,8 +15,8 @@ describe("Cart", () => {
       });
       const cartQuantity = screen.getByRole("cell", { name: /1/i });
 
-      expect(cartItem).toHaveTextContent("Energy saving light bulb");
-      expect(cartQuantity).toHaveTextContent("1");
+      expect(cartItem).toBeInTheDocument();
+      expect(cartQuantity).toBeInTheDocument();
     });
   });
 });
