@@ -105,3 +105,5 @@ I noted that there was a mixture of cart and basket being used and decided to mo
 2. Starting the cart with 1 item, I would put forward that the basket should start with 0 items
 
 3. The cart summary should have a checkout button to allow the user to move onto the payment section of the user flow.
+
+4. Animations and UX features such as an animated shake when something is added to cart.
